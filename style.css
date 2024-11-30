@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+    background: #121212;
+    position: relative;
+    overflow-x: hidden;
+}
+
+header {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #2a2a2a 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    background: #1a1a1a;
+    color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    margin: 10px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+    animation: wave 8s linear infinite;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer {
+    background: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+}
+
+/* Animations */
+@keyframes wave {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+    100% { opacity: 0.3; }
+}
+
+/* Add bubble effect */
+body::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 50%);
+    animation: bubbles 20s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes bubbles {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
