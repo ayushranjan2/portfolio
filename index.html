@@ -1,89 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayush Ranjan's Portfolio</title>
-    <link rel="stylesheet" href="style.css"></link>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayush Ranjan | Cloud Engineer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="animate-title">Ayush Ranjan</h1>
+      <p class="animate-subtitle">Aspiring Cloud & DevOps Engineer</p>
+      <a href="#contact" class="btn animate-cta">Get in Touch</a>
+    </div>
+  </header>
 
-   
-    <header>
-        <h1>Ayush Ranjan</h1>
-        <p>Second-year Mechanical Engineering Student</p>
-        <p>Email: <a href="mailto:ranjanayush399@gmail.com">ranjanayush399@gmail.com</a></p>
-        <p>Phone: <a href="tel:9508841560">9508841560</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/ayush-ranjanmecheng" target="_blank">Profile</a></p>
-    </header>
-</body>
-<body>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I have a strong foundation in core engineering principles and a diverse skill set in web development. Experienced in building projects that integrate technical knowledge with practical applications, demonstrating adaptability and a passion for technology.</p>
-    </section>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>TensorFlow</li>
-            <li>Node.js</li>
-            <li>PyTorch</li>
-            <li>Flask</li>
-            <li>Express.js</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-    </section>
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I am a Mechanical Engineering student from CSJMU Kanpur with a deep interest in cloud infrastructure, DevOps practices, and full-stack web development. I aspire to work on scalable systems and optimize development pipelines using modern DevOps tools and cloud platforms like AWS and Azure.</p>
+<h3>Education</h3>
+<p> Bachelor of Technology in
+    Mechanical Engineering
+    (Jun. 2023 – Present)</p>
+    <p>Chhatrapati Shahu Ji Maharaj
+    University, Kanpur, India</p>  
+    <h4>DOB</h4>
+    <p>15 jan 2004</p>
+</section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <strong>Shift Management Web Application</strong>
-                <p>Integrated with mines safety and ERP software for the Ministry of Mines in SIH 2024.</p>
-            </li>
-            <li>
-                <strong>Portfolio App</strong>
-                <p>A Project Portfolio App built using Node.js, featuring CRUD operations, responsive design, and real-time updates for streamlined project management and display.</p>
-            </li>
-        </ul>
-    </section>
+  <section id="skills" class="section">
+    <h2>Technical Skills</h2>
+    <ul class="grid">
+      <li>Python, Bash, JavaScript</li>
+      <li>HTML, CSS, React, Node.js, Flask</li>
+      <li>Git, CI/CD Pipelines, Docker, Kubernetes (Basic)</li>
+      <li>AWS, Azure, Google Cloud (Familiar)</li>
+      <li>PyTorch, TensorFlow, NLP, NumPy</li>
+      <li>Linux/Unix, SDLC, STLC, Agile</li>
+    </ul>
+  </section>
 
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-            <li>
-                <strong>Developer and Technology Job Simulation</strong> - Accenture UK
-                <ul>
-                    <li>SDL C</li>
-                    <li>Waterfall and Agile Methodologies</li>
-                    <li>STLC</li>
-                    <li>Algorithmic Thinking</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Shift Management System</h3>
+      <p>Developed a web app integrated with ERP and Mines Safety systems for the Ministry of Mines (SIH 2024). Tech stack included Python (Flask), React, Git.</p>
+    </div>
+    <div class="project">
+      <h3>Influencer Marketing Platform (circuitO)</h3>
+      <p>Founded <a href="http://www.circuito.in" target="_blank">Circuito.in</a>, a full-stack influencer marketing site. Managed deployment and basic CI/CD setup.</p>
+    </div>
+    <div class="project">
+    <h3>portfolio website</h3>
+        <p>Developed a website for portfolio . Tech stack included html css javascript. </p>
+      </div>
+  </section>
 
-    <section id="responsibilities">
-        <h2>Responsibilities</h2>
-        <ul>
-            <li>Secretary - University’s Students Hobby Club Council - Cultural Club</li>
-            <li>Joint Secretary - SPIC MACAY Heritage Club, CSJMU Chapter
-                <ul>
-                    <li>Organized and managed over 50 events with an audience exceeding 3000.</li>
-                </ul>
-            </li>
-            <li>Graphic Designer (Logos, Hoardings, Banners)</li>
-        </ul>
-    </section>
-</body>
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="experience">
+      <h3>SDE Intern – Bluestock.in</h3>
+      <p>Worked on frontend and backend for IPO site. Applied Git version control and Agile development.</p>
+    </div>
+    <div class="experience">
+      <h3>Sales Intern – Younity.in</h3>
+      <p>Handled communication and marketing for Ed-Tech platform focused on upskilling and placements.</p>
+    </div>
+  </section>
+  <section id="Certifications" class="section">
+    <h2>Certifictaions</h2>
+    <div class="Certification">
+        <h3>ACCENTURE UK DEVELOPER AND
+            TECHNOLOGY JOB SIMULATION</h3>
+            <p>Conducted in-depth research into emerging technology trends, particularly in the field of DevOps, demonstrating a proactive approach to staying informed about the rapidly evolving tech landscape.
+                Created and delivered a compelling PowerPoint presentation analysing and comparing Waterfall and Agile methodologies.
+                Designed a custom algorithm using pseudocode and effectively communicated its logic by creating a defotailed flow diagram.
+                Debugged a program written in Python by fixing syntax and logic errors in the code
+            </p>
+            </div>
 
-    <footer>
-        <p>&copy; 2023 Ayush Ranjan. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+
+  <section id="leadership" class="section">
+    <h2>Leadership Roles</h2>
+    <ul>
+      <li>Secretary, Cultural Club – Managed 50+ events with 3000+ attendees.</li>
+      <li>Joint Secretary, SPIC MACAY Heritage Club – CSJMU Chapter.</li>
+      <li>Graphic Designer – Designed logos, banners, hoardings.</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:ranjanayush399@gmail.com">ranjanayush399@gmail.com</a></p>
+    <p>Phone: <a href="tel:+919508841560">+91 95088 41560</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/ayush-ranjanmecheng" target="_blank">ayush-ranjanmecheng</a></p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Ayush Ranjan | Built with ❤️ for the cloud.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
