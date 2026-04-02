@@ -1,187 +1,194 @@
-/* Base Styles */
+:root {
+  --c-black: #080706;
+  --c-dust: #1a1511; 
+  --c-gold: #e5b32e;
+  --c-fire: #ff4500;
+  --c-beige: #dfd1c3;
+  --c-green: #37ff00;
+  --c-red: #ff002b;
+
+  --font-mass: 'Anton', sans-serif;
+  --font-sec: 'Oswald', sans-serif;
+  --font-body: 'Rajdhani', sans-serif;
+}
+
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #121212;
-    color: #f0f0f0;
-    scroll-behavior: smooth;
-    -webkit-tap-highlight-color: transparent;
-  }
-  
-  h1, h2, h3 {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-  
-  p, li {
-    line-height: 1.6;
-  }
-  
-  a {
-    color: #00adb5;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Layout */
-  .section {
-    padding: 4rem 2rem;
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  .navbar {
-    background-color: #1f1f1f;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .navbar ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar a {
-    color: #fff;
-    transition: color 0.3s;
-    font-size: 1rem;
-  }
-  
-  .navbar a:hover {
-    color: #00adb5;
-  }
-  
-  /* Hero */
-  .hero {
-    background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');
-    background-size: cover;
-    background-position: center;
-    padding: 6rem 2rem;
-    text-align: center;
-    color: #fff;
-    position: relative;
-  }
-  
-  .hero::after {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 0;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    padding: 1rem;
-  }
-  
-  .btn {
-    display: inline-block;
-    background-color: #00adb5;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    margin-top: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    text-align: center;
-    touch-action: manipulation;
-  }
-  
-  .btn:hover {
-    background-color: #019ca3;
-  }
-  
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding-top: 1rem;
-  }
-  
-  .grid li {
-    flex: 1 1 200px;
-    background: #1f1f1f;
-    padding: 1rem;
-    border-radius: 5px;
-    text-align: center;
-    word-wrap: break-word;
-  }
-  
-  .project, .experience {
-    margin-bottom: 2rem;
-  }
-  
-  .footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #1a1a1a;
-    color: #888;
-    font-size: 0.9rem;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .navbar ul {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  
-    .grid {
-      flex-direction: column;
-    }
-  
-    .hero {
-      padding: 4rem 1rem;
-    }
-  
-    .btn {
-      width: 100%;
-      max-width: 300px;
-    }
-  
-    .section {
-      padding: 3rem 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 1.75rem;
-    }
-  
-    h2 {
-      font-size: 1.3rem;
-    }
-  
-    .btn {
-      font-size: 0.95rem;
-      padding: 0.6rem 1rem;
-    }
-  
-    .navbar a {
-      font-size: 0.95rem;
-    }
-  
-    .hero-content {
-      padding: 0.5rem;
-    }
-  
-    .grid li {
-      padding: 0.75rem;
-    }
-  }
-  
+  background-color: var(--c-black);
+  color: var(--c-beige);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  /* Height will be set very large via JS to allow scrolling */
+}
+
+/* Scroll Progress Bar */
+.progress-bar {
+  position: fixed;
+  top: 0; left: 0; width: 0%; height: 5px;
+  background: linear-gradient(90deg, var(--c-fire), var(--c-gold));
+  z-index: 99999;
+  box-shadow: 0 0 10px var(--c-fire);
+}
+
+/* --- THE START GATE --- */
+#start-gate {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.95);
+  z-index: 999999;
+  display: flex; justify-content: center; align-items: center; text-align: center;
+  transition: opacity 1s, visibility 1s;
+}
+
+.warning-text {
+  font-family: var(--font-mass); font-size: 4rem; color: var(--c-red);
+  letter-spacing: 5px; margin-bottom: 20px;
+  text-shadow: 4px 4px 0px var(--c-fire);
+}
+
+#start-gate p {
+  font-size: 1.5rem; font-family: var(--font-sec); color: var(--c-beige); margin-bottom: 40px;
+  text-transform: uppercase; letter-spacing: 2px;
+}
+
+#enter-btn {
+  background: var(--c-fire); border: 2px solid var(--c-gold);
+  color: #fff; font-family: var(--font-mass); font-size: 2rem;
+  padding: 15px 40px; cursor: pointer; text-transform: uppercase;
+  letter-spacing: 3px; transform: scale(1); transition: all 0.2s;
+  box-shadow: 0 10px 30px rgba(255, 69, 0, 0.5);
+}
+#enter-btn:hover { background: var(--c-gold); border-color: var(--c-fire); transform: scale(1.1); box-shadow: 0 10px 50px rgba(229, 179, 46, 0.8); }
+
+/* --- THE VIEWPORT --- */
+.viewport {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  overflow: hidden; pointer-events: none; /* Let scroll pass through */
+}
+
+/* Background Effects */
+.bg-dust {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at center, var(--c-dust) 0%, var(--c-black) 100%);
+  z-index: 1;
+}
+
+#ash-canvas {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;
+  opacity: 0.5;
+}
+
+.bg-flash {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: #fff; z-index: 10; opacity: 0; pointer-events: none;
+}
+.flash-active {
+  animation: flashAnim 0.3s cubic-bezier(0.1, 1, 0.1, 1);
+}
+@keyframes flashAnim {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* General Scene Setup */
+.scene {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  z-index: 20; text-align: center; opacity: 0; 
+  will-change: transform, opacity;
+}
+
+/* Typography Helpers */
+.text-gold { color: var(--c-gold); text-shadow: 0 0 10px rgba(229, 179, 46, 0.5); }
+.text-red { color: var(--c-red); text-shadow: 0 0 15px rgba(255, 0, 43, 0.8); }
+.text-green { color: var(--c-green); text-shadow: 0 0 15px rgba(55, 255, 0, 0.6); }
+
+/* SCENE 1: NAME */
+#scene-name { flex-direction: column; }
+.name-part {
+  font-family: var(--font-mass); font-size: clamp(6rem, 15vw, 15rem);
+  line-height: 0.8; letter-spacing: -2px; color: #fff;
+  text-shadow: 10px 10px 0px rgba(0,0,0,0.8), -2px -2px 0px var(--c-gold);
+  transform: scale(3); opacity: 0; /* Default invisible before JS maps it */
+}
+.hero-subtitle {
+  font-family: var(--font-sec); font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--c-fire); letter-spacing: 15px; margin-top: 20px;
+  background: var(--c-black); display: inline-block; padding: 10px 20px;
+  border: 1px solid var(--c-gold); opacity: 0; transform: translateY(100px);
+}
+
+/* SCENE 2: ABOUT */
+.about-container { max-width: 1000px; padding: 0 40px; }
+.massive-head {
+  font-family: var(--font-mass); font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1; text-transform: uppercase; margin-bottom: 30px;
+}
+.impact-text {
+  font-family: var(--font-sec); font-size: clamp(1.2rem, 2.5vw, 2rem);
+  line-height: 1.5; color: var(--c-beige);
+  background: rgba(0,0,0,0.6); padding: 40px; border-left: 10px solid var(--c-fire);
+}
+.degree-stamp {
+  font-family: var(--font-mass); font-size: 2rem; color: var(--c-black);
+  background: var(--c-gold); padding: 10px 20px; display: inline-block;
+  transform: rotate(-3deg); margin-top: 30px; border: 3px solid #fff;
+}
+
+/* SCENE 3: EXPERIENCE (Combat Logs) */
+.chapter-title {
+  font-family: var(--font-mass); font-size: clamp(5rem, 10vw, 10rem);
+  color: rgba(255,255,255,0.05); position: absolute; left: -10vw; top: 10vh;
+  white-space: nowrap; pointer-events: none; z-index: -1;
+  -webkit-text-stroke: 2px rgba(255, 69, 0, 0.4);
+}
+.right-align { left: auto; right: -10vw; text-align: right; }
+
+.exp-stomp {
+  background: #0a0a0a; border: 2px solid #222;
+  width: 80%; max-width: 800px; margin: 15px auto; padding: 30px;
+  text-align: left; position: relative;
+  /* Will be smashed in via JS matrix/scale */
+}
+.exp-year {
+  position: absolute; right: 20px; top: 20px; font-family: var(--font-mass);
+  font-size: 4rem; color: rgba(255,255,255,0.1); line-height: 0.8;
+}
+.exp-title { font-family: var(--font-sec); font-size: 2.5rem; text-transform: uppercase; line-height: 1.1; margin-bottom: 10px; }
+.exp-desc { font-size: 1.2rem; font-weight: 700; color: #aaa; text-transform: uppercase; }
+
+/* SCENE 4: PROJECTS (Arsenal) */
+.project-box {
+  background: var(--c-fire); color: var(--c-black);
+  width: 80%; max-width: 900px; padding: 40px; margin: 20px auto;
+  border: 4px solid #fff; text-align: center;
+  box-shadow: 15px 15px 0px var(--c-black), 15px 15px 0px 4px var(--c-gold);
+}
+.proj-title { font-family: var(--font-mass); font-size: 3.5rem; letter-spacing: 2px; }
+.proj-tech { font-family: var(--font-sec); font-size: 1.5rem; font-weight: 700; border-top: 2px solid var(--c-black); margin-top: 10px; padding-top: 10px; }
+
+/* SCENE 5: CONTACT (Climax) */
+.contact-shatter h1 {
+  font-family: var(--font-mass); font-size: clamp(6rem, 12vw, 12rem);
+  color: var(--c-beige); line-height: 0.8; text-shadow: -5px -5px 0px var(--c-red), 5px 5px 0px var(--c-green);
+  margin-bottom: 40px;
+}
+.contact-info p {
+  font-family: var(--font-sec); font-size: clamp(1.5rem, 3vw, 3rem);
+  margin: 10px 0; font-weight: 700; letter-spacing: 2px; background: rgba(0,0,0,0.8); display: inline-block; padding: 0 20px;
+}
+.final-shot {
+  margin-top: 80px; font-family: var(--font-mass); color: var(--c-gold); font-size: 2rem; letter-spacing: 15px; border-bottom: 5px solid var(--c-fire); padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .hero-subtitle { font-size: 1.2rem; letter-spacing: 5px; }
+  .name-part { font-size: 5.5rem; }
+  .chapter-title { -webkit-text-stroke: 1px rgba(255, 69, 0, 0.4); font-size: 4rem; top: 5vh; }
+  .exp-stomp { padding: 20px; text-align: center; }
+  .exp-year { position: static; display: block; margin-bottom: 10px; font-size: 3rem; }
+  .project-box { box-shadow: 8px 8px 0px var(--c-black), 8px 8px 0px 2px var(--c-gold); padding: 20px; }
+  .proj-title { font-size: 2.2rem; }
+}
