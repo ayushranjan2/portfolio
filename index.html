@@ -3,114 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayush Ranjan | Cloud Engineer Portfolio</title>
+  <title>Ayush Ranjan | The Trailer</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1 class="animate-title">Ayush Ranjan</h1>
-      <p class="animate-subtitle">Aspiring Cloud & DevOps Engineer</p>
-      <a href="#contact" class="btn animate-cta">Get in Touch</a>
+
+  <!-- Epic Audio Track Container (Royalty Free Placeholder) -->
+  <audio id="hero-bgm" src="https://assets.mixkit.co/music/preview/mixkit-cinematic-action-trailer-921.mp3" loop></audio>
+
+  <!-- Start Gate Overlay -->
+  <div id="start-gate">
+    <div class="glitch-wrapper">
+      <h1 class="warning-text">WARNING: INTENSE EXPERIENCE</h1>
+      <p>Ensure audio is enabled. Scroll vigorously.</p>
+      <button id="enter-btn">ENTER THE ARENA</button>
     </div>
-  </header>
+  </div>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#leadership">Leadership</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Progress Bar Top -->
+  <div class="progress-bar"></div>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>I am a Mechanical Engineering student from CSJMU Kanpur with a deep interest in cloud infrastructure, DevOps practices, and full-stack web development. I aspire to work on scalable systems and optimize development pipelines using modern DevOps tools and cloud platforms like AWS and Azure.</p>
-<h3>Education</h3>
-<p> Bachelor of Technology in
-    Mechanical Engineering
-    (Jun. 2023 – Present)</p>
-    <p>Chhatrapati Shahu Ji Maharaj
-    University, Kanpur, India</p>  
-    <h4>DOB</h4>
-    <p>15 jan 2004</p>
-</section>
+  <!-- The Fixed Viewport that acts as a Camera -->
+  <div class="viewport" id="viewport">
+    
+    <!-- Background Effects -->
+    <div class="bg-dust"></div>
+    <div class="bg-flash" id="bg-flash"></div>
+    <canvas id="ash-canvas"></canvas> <!-- Flying burning ash/dust -->
 
-  <section id="skills" class="section">
-    <h2>Technical Skills</h2>
-    <ul class="grid">
-      <li>Python, Bash, JavaScript</li>
-      <li>HTML, CSS, React, Node.js, Flask</li>
-      <li>Git, CI/CD Pipelines, Docker, Kubernetes (Basic)</li>
-      <li>AWS, Azure, Google Cloud (Familiar)</li>
-      <li>PyTorch, TensorFlow, NLP, NumPy</li>
-      <li>Linux/Unix, SDLC, STLC, Agile</li>
-    </ul>
-  </section>
-
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Shift Management System</h3>
-      <p>Developed a web app integrated with ERP and Mines Safety systems for the Ministry of Mines (SIH 2024). Tech stack included Python (Flask), React, Git.</p>
+    <!-- SCENE 1: THE NAME SLAM -->
+    <div class="scene" id="scene-name">
+      <div class="name-part name-first">AYUSH</div>
+      <div class="name-part name-last">RANJAN</div>
+      <div class="hero-subtitle">FULL-STACK | AI/ML ENGINEER</div>
     </div>
-    <div class="project">
-      <h3>Influencer Marketing Platform (circuitO)</h3>
-      <p>Founded <a href="http://www.circuito.in" target="_blank">Circuito.in</a>, a full-stack influencer marketing site. Managed deployment and basic CI/CD setup.</p>
-    </div>
-    <div class="project">
-    <h3>portfolio website</h3>
-        <p>Developed a website for portfolio . Tech stack included html css javascript. </p>
+
+    <!-- SCENE 2: The Core / About -->
+    <div class="scene" id="scene-about">
+      <div class="about-container">
+        <h2 class="massive-head">THE FOUNDATION <br/><span class="text-gold">MECHANICAL ORIGIN. AI SCALED.</span></h2>
+        <p class="impact-text">
+          Leveraging PyTorch, TensorFlow & Scikit-Learn.
+          Deploying pipelines on AWS, Azure, & GCP.
+          <br/><span class="text-red">Forged in Data. Built for the Future.</span>
+        </p>
+        <div class="degree-stamp">B.TECH MECH | CSJMU (2023-2027)</div>
       </div>
-  </section>
-
-  <section id="experience" class="section">
-    <h2>Experience</h2>
-    <div class="experience">
-      <h3>SDE Intern – Bluestock.in</h3>
-      <p>Worked on frontend and backend for IPO site. Applied Git version control and Agile development.</p>
     </div>
-    <div class="experience">
-      <h3>Sales Intern – Younity.in</h3>
-      <p>Handled communication and marketing for Ed-Tech platform focused on upskilling and placements.</p>
+
+    <!-- SCENE 3: The Battles / Experience -->
+    <div class="scene" id="scene-exp">
+      <h2 class="chapter-title">COMBAT LOGS</h2>
+      <div class="exp-stomp" id="exp-1">
+        <div class="exp-year">25/26</div>
+        <div class="exp-title">SDE INTERN <br/> <span class="text-gold">AUTHENTIC DIGITAL</span></div>
+        <div class="exp-desc">FoundersOnly.in built scaling React/Flask ops via Docker.</div>
+      </div>
+      <div class="exp-stomp" id="exp-2">
+        <div class="exp-year">24/25</div>
+        <div class="exp-title">SDE INTERN <br/> <span class="text-red">BLUESTOCK.IN</span></div>
+        <div class="exp-desc">IPO Frontend/Backend Architecture & Agile Deployment.</div>
+      </div>
+      <div class="exp-stomp" id="exp-3">
+        <div class="exp-year">2025</div>
+        <div class="exp-title">MECH INTERN <br/> <span class="text-green">INDIAN RAILWAYS</span></div>
+        <div class="exp-desc">Locomotive Assembly, Heavy Heat Treatment, Raw Fabrication.</div>
+      </div>
     </div>
-  </section>
-  <section id="certification" class="section">
-    <h2>certification</h2>
-    <div class="certification">
-        <h3>ACCENTURE UK DEVELOPER AND
-            TECHNOLOGY JOB SIMULATION</h3>
-            <p>Conducted in-depth research into emerging technology trends, particularly in the field of DevOps, demonstrating a proactive approach to staying informed about the rapidly evolving tech landscape.
-                Created and delivered a compelling PowerPoint presentation analysing and comparing Waterfall and Agile methodologies.
-                Designed a custom algorithm using pseudocode and effectively communicated its logic by creating a defotailed flow diagram.
-                Debugged a program written in Python by fixing syntax and logic errors in the code
-            </p>
-            </div>
 
+    <!-- SCENE 4: Projects -->
+    <div class="scene" id="scene-projects">
+      <h2 class="chapter-title right-align">THE ARSENAL</h2>
+      
+      <div class="project-box" id="proj-1">
+        <div class="proj-title">AI PERSONAL ASSISTANT</div>
+        <div class="proj-tech">TRANSFORMERS | NLTK | PYTHON</div>
+      </div>
 
-  <section id="leadership" class="section">
-    <h2>Leadership Roles</h2>
-    <ul>
-      <li>Secretary, Cultural Club – Managed 50+ events with 3000+ attendees.</li>
-      <li>Joint Secretary, SPIC MACAY Heritage Club – CSJMU Chapter.</li>
-      <li>Graphic Designer – Designed logos, banners, hoardings.</li>
-    </ul>
-  </section>
+      <div class="project-box" id="proj-2">
+        <div class="proj-title">AI CAD GENERATOR</div>
+        <div class="proj-tech">PARAMETRIC LOGIC | NEURAL NETWORKS</div>
+      </div>
+      
+      <div class="project-box" id="proj-3">
+        <div class="proj-title">SHIFT MGMT ERP</div>
+        <div class="proj-tech">MINISTRY OF MINES (SIH '24)</div>
+      </div>
+    </div>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:ranjanayush399@gmail.com">ranjanayush399@gmail.com</a></p>
-    <p>Phone: <a href="tel:+919508841560">+91 95088 41560</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/ayush-ranjanmecheng" target="_blank">ayush-ranjanmecheng</a></p>
-  </section>
+    <!-- SCENE 5: The Climax / Contact -->
+    <div class="scene" id="scene-contact">
+      <div class="contact-shatter">
+        <h1>INITIALIZE <br/> UPLINK</h1>
+        <div class="contact-info">
+          <p class="text-gold">+91 9508841560</p>
+          <p class="text-red">ranjanayush399@gmail.com</p>
+          <p class="text-green">Kanpur, UP, BHARAT</p>
+        </div>
+        <div class="final-shot">AYUSH RANJAN // 2026</div>
+      </div>
+    </div>
 
-  <footer class="footer">
-    <p>&copy; 2025 Ayush Ranjan | Built with ❤️ for the cloud.</p>
-  </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
